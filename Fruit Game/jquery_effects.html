@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Effets using JQuery</title>
+    </head>
+    <style>
+        div{
+            font-size: 20px;
+            width: 100px;
+            height: 80px;
+            color: purple;
+            background-color: yellow;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <body>
+
+        <div id="facebook">facebook</div>
+        <br>
+        <button id="button">Fade in and out</button>
+    </body>
+    <script>
+        $(function(){
+            $("#button").click(function(){
+                $("#facebook").fadeToggle();
+            });//do work of both fadeIn and FadeOut
+            $("#button").dblclick(function(){
+                $("#facebook").fadeOut("slow",function(){
+                    window.alert("Method is working")});
+                });
+            });
+
+        
+    </script>
+</html>
